@@ -51,21 +51,21 @@
             <groupId>com.alibaba.cloud</groupId>
             <artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>
         </dependency>
-        <!--openFeign-->
+<!--        &lt;!&ndash;openFeign&ndash;&gt;
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-openfeign</artifactId>
         </dependency>
-        <!--负载均衡器-->
+        &lt;!&ndash;负载均衡器&ndash;&gt;
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-loadbalancer</artifactId>
         </dependency>
-        <!--OK http 的依赖 -->
+        &lt;!&ndash;OK http 的依赖 &ndash;&gt;
         <dependency>
             <groupId>io.github.openfeign</groupId>
             <artifactId>feign-okhttp</artifactId>
-        </dependency>
+        </dependency>-->
         <!-- feigin模块 -->
         <dependency>
             <groupId>com.hmall</groupId>
