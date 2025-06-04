@@ -1,3 +1,31 @@
-10:09:47:089  WARN 90052 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=12h27m32s634ms839µs500ns).
-11:05:06:901  INFO 90052 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-11:05:07:063  INFO 90052 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+23:05:09:239  INFO 44332 --- [main] com.hmall.HMallApplication               : Starting HMallApplication using Java 17.0.13 on 李俊 with PID 44332 (E:\JavaWeb_Project\hmall\hm-service\target\classes started by lijun in E:\JavaWeb_Project\hmall)
+23:05:09:246 DEBUG 44332 --- [main] com.hmall.HMallApplication               : Running with Spring Boot v2.7.12, Spring v5.3.27
+23:05:09:247  INFO 44332 --- [main] com.hmall.HMallApplication               : The following 1 profile is active: "local"
+23:05:10:238  INFO 44332 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+23:05:10:242  INFO 44332 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+23:05:10:286  INFO 44332 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 22 ms. Found 0 Redis repository interfaces.
+23:05:10:872  INFO 44332 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+23:05:10:881  INFO 44332 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+23:05:10:881  INFO 44332 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.75]
+23:05:11:047  INFO 44332 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+23:05:11:048  INFO 44332 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1747 ms
+23:05:12:392  INFO 44332 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2ControllerWebMvc#getDocumentation(String, HttpServletRequest)]
+23:05:12:831  WARN 44332 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'; nested exception is org.springframework.boot.web.server.PortInUseException: Port 8080 is already in use
+23:05:12:848  INFO 44332 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+23:05:12:856  INFO 44332 --- [main] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+23:05:12:866 ERROR 44332 --- [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 8080 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 8080 or configure this application to listen on another port.
+
