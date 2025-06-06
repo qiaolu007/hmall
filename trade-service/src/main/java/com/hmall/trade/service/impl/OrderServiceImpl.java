@@ -88,11 +88,28 @@ public class OrderServiceImpl extends ServiceImpl<OrderMapper, Order> implements
 
     @Override
     public void markOrderPaySuccess(Long orderId) {
+/*        // 1.查询订单
+        Order old = getById(orderId);
+        // 2.判断订单状态
+        if (old == null || old.getStatus() != 1) {
+            // 订单不存在或者订单状态不是1，放弃处理
+            return;
+        }
+        // 3.尝试更新订单
         Order order = new Order();
         order.setId(orderId);
         order.setStatus(2);
         order.setPayTime(LocalDateTime.now());
-        updateById(order);
+        updateById(order);*/
+
+        // 由于判断和更新是两步动作，因此在极小概率下可能存在线程安全问题。
+        // UPDATE `order` SET status = ? , pay_time = ? WHERE id = ? AND status = 1
+        lambdaUpdate()
+                .set(Order::getStatus, 2)
+                .set(Order::getPayTime, LocalDateTime.now())
+                .eq(Order::getId, orderId)
+                .eq(Order::getStatus, 1)
+                .update();
     }
 
     private List<OrderDetail> buildDetails(Long orderId, List<ItemDTO> items, Map<Long, Integer> numMap) {
